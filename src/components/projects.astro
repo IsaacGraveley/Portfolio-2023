@@ -1,0 +1,131 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+
+const devProjects = [
+  {
+    title: "Toronto Weather",
+    description:
+      "To explore more in-depth the significance of APIs, I built a weather web application using the Open Weather API, React and TailwindCSS. I enjoyed overcoming challenges related to filtering through API data and became much more comfortable doing so through this project.",
+      image: "/images/weather-main.png",
+      link: 'https://weather-epe89dpgh-isaacgraveley.vercel.app/'
+  },
+  {
+    title: "Rise Fitness",
+    description:
+      "The goal of this project was to test my design capabilities and developing modern components. I converted this project from Figma mockup to live deployment while using React, NextJS, TailwindCSS GitHub and Vercel.",
+      image: "/images/rise-main.png",
+      link: 'https://nextjs-woad-pi-12.vercel.app/',
+  },
+];
+
+const desProjects = [
+  {
+    title: "Forte Men's Care",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      image: "/images/Forte.webp",
+      link: 'https://www.figma.com/file/fAjCZPAUHLjRQ4ofrFw8IJ/Forte?type=design&mode=design&t=erRodQJNX1Hg18Qq-1',
+  },
+  {
+    title: "Evergreen Landscaping",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      image: "/images/Evergreen.jpg",
+      link: 'https://www.figma.com/file/VVnKVByE2wzSVCMzw3G0wy/Evergreen?type=design&node-id=1%3A4&mode=design&t=erRodQJNX1Hg18Qq-1',
+  },
+  {
+    title: "CyberCloak VPN",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      image: "/images/cybercloakVpn.webp",
+      link: 'https://www.figma.com/file/OLaVU0rLfWygY2Yit6XTPy/CyberCloak-VPN-Mockup?type=design&mode=design&t=erRodQJNX1Hg18Qq-1',
+  },
+  {
+    title: "Potted",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    image: "/images/pottedmain.jpg",
+    link: 'https://www.figma.com/file/TF66g5NqO2x2EJXLTfvHLk/Potted.?type=design&mode=design&t=erRodQJNX1Hg18Qq-1',
+  },
+];
+
+const otherProjects = [
+  {
+    title: "Bring Your Own Framework",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "100% Static HTML, No JS",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "On-Demand Components",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+    icon: "bx:bxs-data",
+  },
+];
+---
+<a name="projects"></a>
+<div class="pt-16 pb-8 md:pb-18">
+  <h2 class="font-syne text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Projects
+  </h2>
+</div>
+<a name="dev"></a>
+<p class="font-inter text-2xl font-bold text-slate-600">Web Development</p>
+<div class="grid sm:grid-cols-1 md:grid-cols-2 mt-4 gap-16 gap-y-12 lg:gap-y-24">
+    {
+      devProjects.map((item) => (
+        <div class="flex flex-col gap-4 items-start">
+          <div class="mt-1 min-w-full">
+            <img class="min-w-full" src={item.image} />
+          </div>
+          <div>
+            <h3 class="font-syne font-semibold text-lg">{item.title}</h3>
+            <p class="text-lg mt-2 text-slate-600">{item.description}</p>
+            <Link href={item.link}
+        size="lg"
+        style="outline"
+        rel="noopener"
+        class="font-sans mt-6 flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bx-code-alt" />
+        View Project
+      </Link>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <a name="des"></a>
+  <p class="text-2xl font-inter font-bold mt-16 text-slate-600">Web Design</p>
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 mt-4 gap-16 gap-y-12 lg:gap-y-24 pb-8 md:pb-18">
+      {
+        desProjects.map((item) => (
+          <div class="flex flex-col gap-4 items-start">
+            <div class="mt-1">
+              <img src={item.image} />
+            </div>
+            <div class="min-w-full">
+              <h3 class="font-syne font-semibold text-lg">{item.title}</h3>
+              <Link href={item.link}
+          size="lg"
+          style="outline"
+          rel="noopener"
+          class="font-sans w-full mt-6 flex gap-1 items-center justify-center"
+          target="_blank">
+          <Icon class="text-black w-4 h-4" name="bx:bx-code-alt" />
+          View Project
+        </Link>
+            </div>
+          </div>
+        ))
+      }
+    </div>

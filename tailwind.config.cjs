@@ -5,7 +5,20 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["Oxygen", "Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
+        syne: ['syne', 'sans-serif'],
+        inter: ['inter', 'sans-serif'],
+      },
+      colors: {
+        'cyan': '#A8DADC',
+        'red': '#E63946',
+        'lightred': '#F36670',
+        'darkred': '#da0c1c',
+        'offwhite': '#F1FAEE',
+        'blue': '#457B9D',
+        'darkblue': '#1D3557',
+        'gray': '#4E4E4E',
+        'black': '#161615',
       },
     },
   },

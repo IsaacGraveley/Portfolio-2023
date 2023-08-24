@@ -1,17 +1,21 @@
 ---
 import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
-import Features from "@components/features.astro";
+import About from "@components/about.astro";
 import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+import Projects from "@components/projects.astro";
+import Experience from "@components/experience.astro";
+import '../../styles/globals.css';
 ---
 
-<Layout title="">
+<Layout title="Isaac Graveley">
   <Container>
     <Hero />
-    <Features />
-    <Logos />
+    <About />
+    <Projects />
+    <Experience />
+    </Container>
     <Cta />
   </Container>
 </Layout>
